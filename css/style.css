@@ -609,7 +609,6 @@ iframe:hover {
 /* * small handphone */
 @media screen and (max-width: 480px) {
     .aside-container {
-        background-color: rebeccapurple;
         width: 50vw !important;
         padding: 4rem 1rem !important;
     }
@@ -669,6 +668,21 @@ iframe:hover {
 
     .videos-thumb {
         padding: 0 !important;
+    }
+
+    .videos-full .video {
+        width: 100%;
+    }
+
+    .videos-full .video iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    .videos-container .video iframe {
+        width: 320px !important;
+        height: 190px !important;
+        padding: 2px;
     }
 
     /* ? works */

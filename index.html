@@ -21,7 +21,7 @@
     <title>Portfolio 2021</title>
 </head>
 
-<body>
+<body id="home">
 
     <!-- ? burger menu -->
     <a href="#" class="burger show"><i class="fas fa-bars"></i></a>
@@ -34,12 +34,12 @@
                 <img src="assets/logo.png" alt="logo">
             </div>
 
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#experience">experience</a></li>
-                <li><a href="#skills">tools & skills</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
-                <li><a href="#contact">contact</a></li>
+            <ul class="link">
+                <li><a href="#home" class="scroll-link">home</a></li>
+                <li><a href="#experience" class="scroll-link">experience</a></li>
+                <li><a href="#skills" class="scroll-link">tools & skills</a></li>
+                <li><a href="#portfolio" class="scroll-link">portfolio</a></li>
+                <li><a href="#contact" class="scroll-link">contact</a></li>
             </ul>
 
             <div class="sosial-media">
@@ -52,7 +52,7 @@
                 <a href="https://www.behance.net/irfanrmdnii" target="_blank"><i class="fab fa-behance-square"></i></a>
             </div>
 
-            <p class="footer">© Copyright 2021. All Rights Reserved.</p>
+            <p class="footer">© Copyright <span id="date"></span>. All Rights Reserved.</p>
         </nav>
     </aside>
 
@@ -68,7 +68,9 @@
             <div class="caption">
                 <small>Hi There...</small>
                 <h1>I AM <span>IRPAN RAMDANI</span></h1>
-                <h4>Motion Graphic Designer</h4>
+                <h4>I am a <span class="typer" id="main" data-words="Motion Graphic Designer" data-delay="100"
+                        data-deleteDelay="1000"> </span>
+                    <span class="cursor" data-owner="main"> </span></h4>
                 <p>How did it all start? if you want to know me better. Let's start by looking at the information below.
                 </p>
                 <div class="btn">
@@ -292,11 +294,15 @@
             <div class="message">
                 <div class="input-message">
                     <h4>Send Message</h4>
-                    <input type="text" name="nama" id="nama" placeholder="Your name..." required autofocus>
-                    <input type="email" name="email" id="email" placeholder="Your email..." required autofocus>
-                    <textarea name="input-message" id="input-message" cols="30" rows="10"
-                        placeholder="Message..."></textarea>
-                    <button type="submit">Submit</button>
+                    <form method="post" id="contact-form">
+                        <input type="text" name="nama" id="nama" placeholder="Your name..." required="required"
+                            autocomplete="off">
+                        <input type="email" name="email" id="email" placeholder="Your email..." required="required"
+                            autocomplete="off">
+                        <textarea name="input-message" id="input-message" cols="30" rows="10" placeholder="Message..."
+                            required="required" autocomplete="off"></textarea>
+                        <button type="submit" value="submit">Submit</button>
+                    </form>
                 </div>
                 <div class="maps">
                     <iframe
@@ -307,7 +313,8 @@
         </section>
     </main>
 
-
+    <!-- ? send mail plugin -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
